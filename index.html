@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="icon" href="Pokedex/favicons/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="https://c5e011a1ad.cbaul-cdnwnd.com/6cf5d0cbc901fd1e718c1e9610c59fe4/200000310-6b3746c31a/pokedex01.png">
+    <link rel="icon" href="https://fevgames.net/wp-content/uploads/2015/09/Pokemon-GO-Pokedex.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Pokedex</title>
 </head>
 <body>
@@ -15,10 +17,15 @@
     <div class="card">
         <input class="input" type="text" id="searchInput" placeholder="Id ou Nome do Pokemon">
         <img class="searchbtn" src="https://www.svgrepo.com/show/356535/search-button.svg" onclick="searchPokemons()">
+        <div class="background"></div>
         <div class="pokemonContainer">
             <h3 class="pokemonId">#</h3>
             <div class="pokemonInfo">
                 <img class="pokemonImage" src="#" alt="pokemon image">
+                <div class="setas">
+                    <button class="prevBtn" onclick="previousPage()"><i class="fas fa-angle-left"></i></button>
+                    <button class="nextBtn" onclick="nextPage()"><i class="fas fa-angle-right"></i></button>
+                </div>
                 <h2 class="pokemonName"></h2>
                 <div class="types">
                     <p class="pokemonType">Ghost</p> 
@@ -26,26 +33,25 @@
                 </div>
                 <div class="stats">
                     <p class="pokemonStat">Hp
-                        <span class="pokemonStatValue">91</span>
+                        <span id="pokemonStatValue" class="hp">1</span>
                     </p> 
                     <p class="pokemonStat">Attack
-                        <span class="pokemonStatValue">91</span>
+                        <span id="pokemonStatValue" class="attack">1</span>
                     </p>
                     <p class="pokemonStat">Defense
-                        <span class="pokemonStatValue">91</span>
+                        <span id="pokemonStatValue" class="defense">1</span>
                     </p>
                     <p class="pokemonStat">SpecialAtk
-                        <span class="pokemonStatValue">91</span>
+                        <span id="pokemonStatValue" class="specialatk">1</span>
                     </p>
                     <p class="pokemonStat">SpecialDef
-                        <span class="pokemonStatValue">91</span>
+                        <span id="pokemonStatValue" class="specialdef">1</span>
                     </p>
                     <p class="pokemonStat">Speed
-                        <span class="pokemonStatValue">91</span>
+                        <span id="pokemonStatValue" class="speed">1</span>
                     </p>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 </html>
